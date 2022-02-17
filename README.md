@@ -1,18 +1,18 @@
-# repository-name
-Implements xxx in symfony
+# doctrine-bundle
+Implements Doctrine Bundle in symfony
 
-| Repository Branch | xxx       Version | Symfony Version | PHP Version     |
-|-------------------|-------------------|-----------------|-----------------|
-| [1.x][2]          | `x.x`             | `5.4.x`         | `8.0` or higher |
+| Repository Branch         | DoctrineBundle Version | Symfony Version | PHP Version     |
+|---------------------------|------------------------|-----------------|-----------------|
+| [feature-value-object][2] | `2.5.x`                | `5.4.x`         | `8.0` or higher |
 
 
-Read [xxx Docs][1]
+Read [DoctrineBundle Docs][1]
 
 Inspired by:   
-- [xxx](link here)
+- [The Value Object and Doctrine](https://www.thinktocode.com/2018/03/19/the-value-object-and-doctrine/)
 
-[1]: https://symfony.com/doc/4.x/bundles/xxx/index.html
-[2]: https://github.com/habibun/xxx/tree/x.x
+[1]: https://symfony.com/bundles/DoctrineBundle/current/index.html
+[2]: https://github.com/habibun/doctrine-bundle/tree/feature-value-object
 
 ## License
-The code is licensed under the [MIT License](https://github.com/habibun/xxx/blob/master/LICENSE).
+The code is licensed under the [MIT License](https://github.com/habibun/doctrine-bundle/blob/master/LICENSE)
