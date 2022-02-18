@@ -7,7 +7,7 @@ Implements Doctrine Bundle in symfony
 | [feature-inheritance-mapping][2] | `2.5.x`                | `5.4.x`         | `8.0` or higher |
 
 
-Read [DoctrineBundle Docs][https://symfony.com/bundles/DoctrineBundle/current/index.html]
+Read [DoctrineBundle Docs](https://symfony.com/bundles/DoctrineBundle/current/index.html)
 
 Inspired by:   
 - Value Object
