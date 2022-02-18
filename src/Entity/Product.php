@@ -46,12 +46,12 @@ class Product
         return $this;
     }
 
-    public function getPrice(): ?string
+    public function getPrice(): ?Price
     {
         return $this->price;
     }
 
-    public function setPrice(string $price): self
+    public function setPrice(Price $price): self
     {
         $this->price = $price;
 
