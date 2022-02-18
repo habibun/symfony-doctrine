@@ -9,8 +9,9 @@ Implements Doctrine Bundle in symfony
 Read [DoctrineBundle Docs][1]
 
 Inspired by:   
-- [The Value Object and Doctrine](https://www.thinktocode.com/2018/03/19/the-value-object-and-doctrine/)
-- [Value Objects in Symfony Forms](https://webmozart.io/blog/2015/09/09/value-objects-in-symfony-forms/)
+- Value Object
+  - [The Value Object and Doctrine](https://www.thinktocode.com/2018/03/19/the-value-object-and-doctrine/)
+  - [Value Objects in Symfony Forms](https://webmozart.io/blog/2015/09/09/value-objects-in-symfony-forms/)
 
 [1]: https://symfony.com/bundles/DoctrineBundle/current/index.html
 [2]: https://github.com/habibun/doctrine-bundle/tree/feature-value-object
