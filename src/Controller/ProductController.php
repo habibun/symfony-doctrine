@@ -19,6 +19,7 @@ class ProductController extends AbstractController
     {
         return $this->render('product/index.html.twig', [
             'products' => $productRepository->findAll(),
+//            'products' => $productRepository->testValueObjectQuery(),
         ]);
     }
 
@@ -30,7 +31,6 @@ class ProductController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-//            dd($form->getData());
             $entityManager->persist($product);
             $entityManager->flush();
 
