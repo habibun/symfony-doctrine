@@ -11,7 +11,9 @@ Read [DoctrineBundle Docs][1]
 Inspired by:   
 - Value Object
   - [The Value Object and Doctrine](https://www.thinktocode.com/2018/03/19/the-value-object-and-doctrine/)
-  - [Value Objects in Symfony Forms](https://webmozart.io/blog/2015/09/09/value-objects-in-symfony-forms/)
+  - [Value Objects in Symfony Forms](https://webmozart.io/blog/2015/09/09/value-objects-in-symfony-forms/)   
+- Inheritance Mapping
+  - [Using doctrine entity inheritance mapping in symfony](http://www.inanzzz.com/index.php/post/e0ln/using-doctrine-entity-inheritance-mapping-in-symfony)
 
 [1]: https://symfony.com/bundles/DoctrineBundle/current/index.html
 [2]: https://github.com/habibun/doctrine-bundle/tree/feature-value-object
