@@ -1,12 +1,13 @@
 # doctrine-bundle
 Implements Doctrine Bundle in symfony
 
-| Repository Branch         | DoctrineBundle Version | Symfony Version | PHP Version     |
-|---------------------------|------------------------|-----------------|-----------------|
-| [feature-value-object][2] | `2.5.x`                | `5.4.x`         | `8.0` or higher |
+| Repository Branch                | DoctrineBundle Version | Symfony Version | PHP Version     |
+|----------------------------------|------------------------|-----------------|-----------------|
+| [feature-value-object][1]        | `2.5.x`                | `5.4.x`         | `8.0` or higher |
+| [feature-inheritance-mapping][2] | `2.5.x`                | `5.4.x`         | `8.0` or higher |
 
 
-Read [DoctrineBundle Docs][1]
+Read [DoctrineBundle Docs][https://symfony.com/bundles/DoctrineBundle/current/index.html]
 
 Inspired by:   
 - Value Object
@@ -15,8 +16,8 @@ Inspired by:
 - Inheritance Mapping
   - [Using doctrine entity inheritance mapping in symfony](http://www.inanzzz.com/index.php/post/e0ln/using-doctrine-entity-inheritance-mapping-in-symfony)
 
-[1]: https://symfony.com/bundles/DoctrineBundle/current/index.html
-[2]: https://github.com/habibun/doctrine-bundle/tree/feature-value-object
+[1]: https://github.com/habibun/doctrine-bundle/tree/feature-value-object
+[2]: https://github.com/habibun/doctrine-bundle/tree/feature-inheritance-mapping
 
 ## License
 The code is licensed under the [MIT License](https://github.com/habibun/doctrine-bundle/blob/master/LICENSE)
