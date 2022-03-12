@@ -25,7 +25,7 @@
             </tr>
             <tr>
                 <th>AskedAt</th>
-                <td>{{ question.askedAt ? question.askedAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ question.askedAt ? question.askedAt|ago }}</td>
             </tr>
         </tbody>
     </table>

@@ -23,7 +23,7 @@
                 <td>{{ question.name }}</td>
                 <td>{{ question.slug }}</td>
                 <td>{{ question.question }}</td>
-                <td>{{ question.askedAt ? question.askedAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ question.askedAt ? question.askedAt|ago }}</td>
                 <td>
                     <a href="{{ path('app_question_show', {'slug': question.slug}) }}">show</a>
                     <a href="{{ path('app_question_edit', {'id': question.id}) }}">edit</a>
