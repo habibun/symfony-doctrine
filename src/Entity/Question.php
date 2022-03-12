@@ -16,7 +16,7 @@ class Question
     #[ORM\Column(type: 'string', length: 255)]
     private $name;
 
-    #[ORM\Column(type: 'string', length: 100)]
+    #[ORM\Column(type: 'string', length: 100, unique: true)]
     private $slug;
 
     #[ORM\Column(type: 'text')]

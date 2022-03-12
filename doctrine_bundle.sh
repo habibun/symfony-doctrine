@@ -8,3 +8,6 @@ docker-compose stop
 docker-compose down
 docker-compose ps
 symfony var:export --multiline
+49symfony console make:migration
+49symfony console console doctrine:migrations:migrate
+symfony console doctrine:migrations:list
