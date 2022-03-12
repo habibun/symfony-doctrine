@@ -11,10 +11,10 @@ Implements Doctrine Bundle in symfony
 Read [DoctrineBundle Docs](https://symfony.com/bundles/DoctrineBundle/current/index.html)
 
 ## Resources
-- [`Value Object`][1]
+- [`feature-value-object`][1]
   - [The Value Object and Doctrine](https://www.thinktocode.com/2018/03/19/the-value-object-and-doctrine/)
   - [Value Objects in Symfony Forms](https://webmozart.io/blog/2015/09/09/value-objects-in-symfony-forms/)   
-- [`Inheritance Mapping`][2]
+- [`feature-inheritance-mapping`][2]
   - [Using doctrine entity inheritance mapping in symfony](http://www.inanzzz.com/index.php/post/e0ln/using-doctrine-entity-inheritance-mapping-in-symfony)
 - [`symfony-doctrine`][3]
   - [Doctrine, Symfony & the Database](https://symfonycasts.com/screencast/symfony-doctrine)
