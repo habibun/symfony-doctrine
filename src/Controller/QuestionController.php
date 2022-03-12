@@ -5,6 +5,8 @@ namespace App\Controller;
 use App\Entity\Question;
 use App\Form\QuestionType;
 use App\Repository\QuestionRepository;
+use Doctrine\ORM\EntityManager;
+use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -39,9 +41,16 @@ class QuestionController extends AbstractController
         ]);
     }
 
-    #[Route('/{id}', name: 'app_question_show', methods: ['GET'])]
-    public function show(Question $question): Response
+    #[Route('/{slug}', name: 'app_question_show', methods: ['GET'])]
+    public function show($slug, EntityManagerInterface $em): Response
     {
+        $question = $em->getRepository(Question::class)
+            ->findOneBy(['slug' => $slug]);
+
+        if (!$question) {
+            throw $this->createNotFoundException('No slug found');
+        }
+
         return $this->render('question/show.html.twig', [
             'question' => $question,
         ]);
