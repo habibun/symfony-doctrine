@@ -11,6 +11,7 @@
                 <th>Id</th>
                 <th>Name</th>
                 <th>Slug</th>
+                <th>Votes</th>
                 <th>Question</th>
                 <th>AskedAt</th>
                 <th>actions</th>
@@ -22,6 +23,7 @@
                 <td>{{ question.id }}</td>
                 <td>{{ question.name }}</td>
                 <td>{{ question.slug }}</td>
+                <td>{{ question.votesString }}</td>
                 <td>{{ question.question }}</td>
                 <td>{{ question.askedAt ? question.askedAt|ago }}</td>
                 <td>

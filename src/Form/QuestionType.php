@@ -16,6 +16,7 @@ class QuestionType extends AbstractType
             ->add('slug')
             ->add('question')
             ->add('askedAt')
+            ->add('votes')
         ;
     }
 
