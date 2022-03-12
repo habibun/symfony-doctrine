@@ -64,7 +64,7 @@ class QuestionRepository extends ServiceEntityRepository
             ->andWhere('q.askedAt IS NOT NULL');
     }
 
-    private function getOrCreateQueryBuilder(QueryBuilder $qb): QueryBuilder
+    private function getOrCreateQueryBuilder(QueryBuilder $qb = null): QueryBuilder
     {
         return $qb?:$this->createQueryBuilder('q');
     }

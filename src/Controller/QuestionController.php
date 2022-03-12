@@ -42,17 +42,10 @@ class QuestionController extends AbstractController
     }
 
     #[Route('/{slug}', name: 'app_question_show', methods: ['GET'])]
-    public function show($slug, EntityManagerInterface $em): Response
+    public function show(Question $slug, EntityManagerInterface $em): Response
     {
-        $question = $em->getRepository(Question::class)
-            ->findOneBy(['slug' => $slug]);
-
-        if (!$question) {
-            throw $this->createNotFoundException('No slug found');
-        }
-
         return $this->render('question/show.html.twig', [
-            'question' => $question,
+            'question' => $slug,
         ]);
     }
 
