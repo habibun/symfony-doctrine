@@ -7,3 +7,4 @@ docker-compose exec database mysql -u root --password=password
 docker-compose stop
 docker-compose down
 docker-compose ps
+symfony var:export --multiline
