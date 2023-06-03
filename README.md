@@ -1,4 +1,4 @@
-# doctrine-bundle
+# symfony-doctrine
 Implements Doctrine Bundle in symfony
 
 | Repository Branch                | DoctrineBundle Version | Symfony Version | PHP Version     |
