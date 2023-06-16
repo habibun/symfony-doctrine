@@ -17,8 +17,43 @@ class FortuneCookie
      */
     private $id;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=Category::class, inversedBy="fortuneCookie")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $category;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $fortune;
+
     public function getId(): ?int
     {
         return $this->id;
+    }
+
+    public function getCategory(): ?Category
+    {
+        return $this->category;
+    }
+
+    public function setCategory(?Category $category): self
+    {
+        $this->category = $category;
+
+        return $this;
+    }
+
+    public function getFortune(): ?string
+    {
+        return $this->fortune;
+    }
+
+    public function setFortune(string $fortune): self
+    {
+        $this->fortune = $fortune;
+
+        return $this;
     }
 }

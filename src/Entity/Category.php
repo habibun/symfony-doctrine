@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\CategoryRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -26,6 +28,16 @@ class Category
      * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $iconKey;
+
+    /**
+     * @ORM\OneToMany(targetEntity=FortuneCookie::class, mappedBy="category")
+     */
+    private $fortuneCookies;
+
+    public function __construct()
+    {
+        $this->fortuneCookies = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -52,6 +64,36 @@ class Category
     public function setIconKey(?string $iconKey): self
     {
         $this->iconKey = $iconKey;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, FortuneCookie>
+     */
+    public function getFortuneCookies(): Collection
+    {
+        return $this->fortuneCookies;
+    }
+
+    public function addFortuneCookie(FortuneCookie $fortuneCookie): self
+    {
+        if (!$this->fortuneCookies->contains($fortuneCookie)) {
+            $this->fortuneCookies[] = $fortuneCookie;
+            $fortuneCookie->setCategory($this);
+        }
+
+        return $this;
+    }
+
+    public function removeFortuneCookie(FortuneCookie $fortuneCookie): self
+    {
+        if ($this->fortuneCookie->removeElement($fortuneCookie)) {
+            // set the owning side to null (unless already changed)
+            if ($fortuneCookie->getCategory() === $this) {
+                $fortuneCookie->setCategory(null);
+            }
+        }
 
         return $this;
     }
