@@ -3,6 +3,11 @@
 {% block body %}
 
     <h2>Category</h2>
+    <form action="{{ path('app_homepage') }}">
+        <input type="text" name="q">
+
+        <input type="submit">
+    </form>
 
     <table>
         <thead>

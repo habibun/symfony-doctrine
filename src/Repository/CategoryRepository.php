@@ -50,6 +50,16 @@ class CategoryRepository extends ServiceEntityRepository
         return $query->getResult();
     }
 
+    public function search(string $term)
+    {
+        return $this->createQueryBuilder('category')
+            ->andWhere('category.name LIKE :searchTerm OR category.iconKey LIKE :searchTerm')
+            ->setParameter('searchTerm', '%'.$term.'%')
+            ->addOrderBy('category.name', Criteria::DESC)
+            ->getQuery()
+            ->getResult();
+    }
+
 //    public function findOneBySomeField($value): ?Category
 //    {
 //        return $this->createQueryBuilder('c')
