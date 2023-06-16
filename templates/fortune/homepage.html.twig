@@ -17,6 +17,7 @@
         {% for category in categories %}
             <tr>
                 <td>{{ category.name }}</td>
+                <td>{{ category.fortuneCookies|length }}</td>
             </tr>
         {% endfor %}
         </tbody>
