@@ -30,7 +30,7 @@ class Category
     private $iconKey;
 
     /**
-     * @ORM\OneToMany(targetEntity=FortuneCookie::class, mappedBy="category")
+     * @ORM\OneToMany(targetEntity=FortuneCookie::class, mappedBy="category", fetch="EXTRA_LAZY")
      */
     private $fortuneCookies;
 

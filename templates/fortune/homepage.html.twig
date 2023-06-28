@@ -1,31 +1,16 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-
-    <h2>Category</h2>
-    <form action="{{ path('app_homepage') }}">
-        <input type="text" name="q">
-
-        <input type="submit">
-    </form>
-
-    <table>
-        <thead>
-            <th>Name</th>
-        </thead>
-        <tbody>
+    <h1> Query for your Fortune </h1>
+    <p> Review categories for available cookie fortunes </p>
+    <div>
         {% for category in categories %}
-            <tr>
-                <td>{{ category.name }}</td>
-                <td>{{ category.fortuneCookies|length }}</td>
-            </tr>
+            <a href="{{ path('app_category_show', {'id':  category.id}) }}">
+                {{ category.name }} - ({{ category.fortuneCookies|length }})
+            </a>
+            <br>
+        {% else %}
+            <h3>Not found</h3>
         {% endfor %}
-        </tbody>
-    </table>
-
+    </div>
 {% endblock %}
-
-{% block title %}
-
-{% endblock %}
-

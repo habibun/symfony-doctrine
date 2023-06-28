@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {{ category.name }}
+
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Fortunes
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for fortuneCookie in category.fortuneCookies %}
+            <tr>
+                <td>
+                    {{ fortuneCookie.fortune }}
+                </td>
+                <td>
+                    {{ fortuneCookie.numberPrinted }} printed since {{ fortuneCookie.createdAt|date('M jS Y') }}
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <a href="{{ path('app_homepage') }}"> Back to Fortune Categories</a>
+{% endblock %}

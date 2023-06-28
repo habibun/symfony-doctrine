@@ -18,7 +18,7 @@ class FortuneCookie
     private $id;
 
     /**
-     * @ORM\ManyToOne(targetEntity=Category::class, inversedBy="fortuneCookie")
+     * @ORM\ManyToOne(targetEntity=Category::class, inversedBy="fortuneCookies")
      * @ORM\JoinColumn(nullable=false)
      */
     private $category;
