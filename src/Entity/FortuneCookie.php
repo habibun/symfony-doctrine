@@ -28,6 +28,27 @@ class FortuneCookie
      */
     private $fortune;
 
+    /**
+     * @ORM\Column(type="integer", length=255, options={"default" : 0})
+     */
+    private int $numberPrinted = 0;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(type="datetime")
+     */
+    private \DateTime $createdAt;
+
+    /**
+     * FortuneCookie constructor
+     */
+    public function __construct()
+    {
+        $this->createdAt = new \DateTime();
+    }
+
+
     public function getId(): ?int
     {
         return $this->id;
@@ -53,6 +74,42 @@ class FortuneCookie
     public function setFortune(string $fortune): self
     {
         $this->fortune = $fortune;
+
+        return $this;
+    }
+
+    public function getNumberPrinted(): int
+    {
+        return $this->numberPrinted;
+    }
+
+    public function setNumberPrinted(int $numberPrinted): FortuneCookie
+    {
+        $this->numberPrinted = $numberPrinted;
+
+        return $this;
+    }
+
+    /**
+     * Get createdAt
+     *
+     * @return \DateTime
+     */
+    public function getCreatedAt(): ?\DateTime
+    {
+        return $this->createdAt ?? null;
+    }
+
+    /**
+     * Set createdAt
+     *
+     * @param \DateTime $createdAt
+     *
+     * @return FortuneCookie
+     */
+    public function setCreatedAt(\DateTime $createdAt): FortuneCookie
+    {
+        $this->createdAt = $createdAt;
 
         return $this;
     }
