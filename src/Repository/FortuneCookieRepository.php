@@ -94,4 +94,11 @@ class FortuneCookieRepository extends ServiceEntityRepository
 
         return $result;
     }
+
+
+    public static function createFortuneCookiesStillInProductionCriteria(): Criteria
+    {
+        return Criteria::create()
+            ->andWhere(Criteria::expr()->eq('discontinued', false));
+    }
 }

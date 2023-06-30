@@ -41,6 +41,12 @@ class FortuneCookie
     private \DateTime $createdAt;
 
     /**
+     * @var bool
+     * @ORM\Column(type="boolean")
+     */
+    private bool $discontinued = false;
+
+    /**
      * FortuneCookie constructor
      */
     public function __construct()
