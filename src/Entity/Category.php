@@ -89,7 +89,7 @@ class Category
 
     public function removeFortuneCookie(FortuneCookie $fortuneCookie): self
     {
-        if ($this->fortuneCookie->removeElement($fortuneCookie)) {
+        if ($this->fortuneCookies->removeElement($fortuneCookie)) {
             // set the owning side to null (unless already changed)
             if ($fortuneCookie->getCategory() === $this) {
                 $fortuneCookie->setCategory(null);

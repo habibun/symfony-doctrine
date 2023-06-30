@@ -2,6 +2,14 @@
 
 {% block body %}
     <h1> Query for your Fortune </h1>
+    <h2>Category</h2>
+    <form action="{{ path('app_homepage') }}">
+        <input type="text" name="q">
+
+        <input type="submit">
+    </form>
+
+
     <p> Review categories for available cookie fortunes </p>
     <div>
         {% for category in categories %}
