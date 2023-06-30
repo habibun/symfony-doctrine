@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    {{ category.name }}
+    {{ categoryName }}
 
     <table>
         <thead>
@@ -10,7 +10,7 @@
                     Fortunes
                 </th>
                 <th class="border p-4">
-                    Print History ({{ fortunesPrinted|number_format }} total)
+                    Print History ({{ fortunesPrinted|number_format }} total, {{ fortunesAverage|number_format }} average)
                 </th>
             </tr>
         </thead>

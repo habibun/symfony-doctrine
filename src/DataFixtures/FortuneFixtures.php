@@ -15,6 +15,7 @@ class FortuneFixtures extends Fixture
             $fortune->setFortune(sprintf("FortuneCookie-%d", $i));
             $category = $this->getReference('category-' . rand(1, 5));
             $fortune->setCategory($category);
+            $fortune->setNumberPrinted(rand(1000, 2000));
             $manager->persist($fortune);
         }
 
