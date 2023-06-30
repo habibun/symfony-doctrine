@@ -68,11 +68,10 @@ class CategoryRepository extends ServiceEntityRepository
 
     public function findWithFortunesJoin(int $id): ?Category
     {
-        $qb = $this->addOrderByCategoryName();
-
-        return $this->addFortuneCookieJoinAndSelect($qb)
+        return $this->addFortuneCookieJoinAndSelect()
             ->andWhere('category.id = :id')
             ->setParameter('id', $id)
+            ->orderBy('RAND()', Criteria::ASC)
             ->getQuery()
             ->getOneOrNullResult();
     }
