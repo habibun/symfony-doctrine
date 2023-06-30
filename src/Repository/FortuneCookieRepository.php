@@ -6,6 +6,8 @@ use App\Entity\Category;
 use App\Entity\FortuneCookie;
 use App\Model\CategoryFortuneStats;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+use Doctrine\Common\Collections\Criteria;
+use Doctrine\ORM\QueryBuilder;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
