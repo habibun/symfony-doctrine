@@ -44,8 +44,8 @@ class CategoryRepository extends ServiceEntityRepository
 
     public function findAllOrdered()
     {
-        $qb = $this->createQueryBuilder('c')
-            ->addOrderBy('c.name', Criteria::DESC);
+        $qb = $this->addGroupByCategory()
+            ->addOrderBy('category.name', Criteria::DESC);
 
         $query = $qb->getQuery();
 
@@ -57,7 +57,7 @@ class CategoryRepository extends ServiceEntityRepository
         $termList = explode(' ', $term);
         $qb = $this->addOrderByCategoryName();
 
-        return $this->addFortuneCookieJoinAndSelect($qb)
+        return $this->addGroupByCategory($qb)
             ->andWhere('category.name LIKE :searchTerm OR category.name IN (:termList) OR category.iconKey LIKE :searchTerm OR fortuneCookie.fortune LIKE :searchTerm')
             ->setParameter('searchTerm', '%'.$term.'%')
             ->setParameter('termList', $termList)
@@ -97,5 +97,13 @@ class CategoryRepository extends ServiceEntityRepository
     {
         return ($qb ?? $this->createQueryBuilder('category'))
             ->addOrderBy('category.name', Criteria::DESC);
+    }
+
+    private function addGroupByCategory(QueryBuilder $qb = null): QueryBuilder
+    {
+        return ($qb ?? $this->createQueryBuilder('category'))
+            ->addSelect('COUNT(fortuneCookie.id) AS fortuneCookiesTotal')
+            ->leftJoin('category.fortuneCookies', 'fortuneCookie')
+            ->addGroupBy('category.id');
     }
 }

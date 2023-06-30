@@ -12,9 +12,10 @@
 
     <p> Review categories for available cookie fortunes </p>
     <div>
-        {% for category in categories %}
+        {% for categoryData in categories %}
+            {% set category = categoryData[0] %}
             <a href="{{ path('app_category_show', {'id':  category.id}) }}">
-                {{ category.name }} - ({{ category.fortuneCookies|length }})
+                {{ category.name }} - ({{ categoryData.fortuneCookiesTotal|length }})
             </a>
             <br>
         {% else %}
